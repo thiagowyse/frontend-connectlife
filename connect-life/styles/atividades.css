@@ -43,7 +43,7 @@ h1{
     gap: 40px;
     align-items: flex-start;
     margin-top: 20px;
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -58,7 +58,7 @@ h1{
 /* Cards de atividades */
 .activities {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
 }
 
