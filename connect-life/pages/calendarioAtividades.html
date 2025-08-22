@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Life - Calendário de Atividades</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/atividades.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <span>CONNECT LIFE</span>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Sobre</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Quem Somos</a></li>
+                        <li><a href="#">Nossa Missão</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Voluntários</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Encontre Voluntários</a></li>
+                        <li><a href="#">Suas Conexões</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Atividades</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./calendarioAtividades.html">Calendário de Atividades</a></li>
+                        <li><a href="./agendamentoAtividades.html">Agende sua Atividade</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Mais</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+                <li><a href="./index.html">Sair</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <main class="calendario-container">
+        <div class="atividades-semanais">
+            <h2>Atividades Semanais <a href="#">Ver tudo</a></h2>
+
+            <!--Posteriormente as atividades serão inseridas dinamicamente via JS-->
+            <div class="atividade-card">
+                <div class="atividade-icon">👨‍🦱</div>
+                <div class="atividade-info">
+                    <h3>Caminhada matinal</h3>
+                    <p>29 Abr 2025 - 9:00 AM</p>
+                    <span class="badge">Grupo</span>
+                    <p>Caminhada matinal com o voluntário: <strong>Vitor Hugo</strong></p>
+                </div>
+            </div>
+
+            <div class="atividade-card">
+                <div class="atividade-icon">📖</div>
+                <div class="atividade-info">
+                    <h3>Leitura</h3>
+                    <p>30 Abr 2025 - 9:00 AM</p>
+                    <span class="badge">Grupo</span>
+                    <p>Leitura na Praça Central</p>
+                </div>
+            </div>
+
+            <div class="calendario-mes">
+                <div class="navegacao">
+                    <h3 id="mes-ano"></h3>
+                    <div>
+                        <button id="prev">&lt;</button>&nbsp;
+                        <button id="next">&gt;</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Seg</th>
+                            <th>Ter</th>
+                            <th>Qua</th>
+                            <th>Qui</th>
+                            <th>Sex</th>
+                            <th>Sab</th>
+                            <th>Dom</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dias">
+                        <!-- Dias são inseridos via JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <section class="atividades-main">
+            <div class="atividades-header">
+                <h2><span>Agende</span> suas atividades</h2>
+                <a href="./agendamentoAtividades.html" id="btn-nova-atv">+</a>
+            </div>
+
+            <div class="grid-opcoes">
+                <div class="opcao">Caminhada</div>
+                <div class="opcao">Conversa</div>
+                <div class="opcao">Jogo de Xadrez</div>
+                <div class="opcao">Leitura</div>
+                <div class="opcao">Passeio no Parque</div>
+                <div class="opcao">Ioga</div>
+                <div class="opcao">Dança</div>
+                <div class="opcao">Culinária</div>
+            </div>
+
+            <!--Posteriormente os voluntários serão inseridos dinamicamente via JS-->
+            <h3>Top Voluntários</h3>
+            <div class="voluntarios-grid">
+                <div class="vol-card">
+                    <img src="https://i.pravatar.cc/100?img=5" alt="">
+                    <p>Mariana dos Santos</p>
+                    <span>★★★★★ (1221)</span>
+                </div>
+                <div class="vol-card">
+                    <img src="https://i.pravatar.cc/100?img=7" alt="">
+                    <p>João Mário Pereira</p>
+                    <span>★★★★★ (1023)</span>
+                </div>
+                <div class="vol-card">
+                    <img src="https://i.pravatar.cc/100?img=13" alt="">
+                    <p>Jackson Rodrigues</p>
+                    <span>★★★★★ (1137)</span>
+                </div>
+                <div class="vol-card">
+                    <img src="https://i.pravatar.cc/100?img=8" alt="">
+                    <p>Gabriel da Luz</p>
+                    <span>★★★★★ (1007)</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../scripts/atividades.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+.calendario-container,
+.agendamento-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+/* Calendário de Atividades - Coluna esquerda */
+.atividades-semanais {
+    padding: 2rem 10%;
+    background-color: #f6f6f6;
+}
+
+.atividades-semanais h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.atividades-semanais h2 a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.atividade-card {
+    display: flex;
+    gap: 1rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+}
+
+.atividade-icon {
+    font-size: 2rem;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+.calendario-mes {
+    margin-top: 2rem;
+}
+
+.calendario-mes table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.calendario-mes th,
+.calendario-mes td {
+    padding: 0.5rem;
+}
+
+.calendario-mes td.ativo {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.navegacao button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+}
+
+.navegacao button:hover {
+    background-color: #004d40;
+    transform: scale(1.1);
+}
+
+.navegacao button:active {
+    background-color: #00332a;
+    transform: scale(0.95);
+}
+
+/* Calendário de Atividades - Coluna direita */
+.atividades-main {
+    padding: 2rem 5%;
+}
+
+.atividades-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.atividades-header h2,
+.voluntarios-disponiveis h2 {
+    font-size: 1.5rem;
+}
+
+.atividades-header h2 span,
+.voluntarios-disponiveis h2 span {
+    color: var(--primary-color);
+}
+
+#btn-nova-atv {
+    font-size: 2rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#btn-nova-atv:hover {
+    background-color: #004d40;
+    transform: scale(1.1);
+}
+
+#btn-nova-atv:active {
+    background-color: #00332a;
+    transform: scale(0.95);
+}
+
+.grid-opcoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.opcao {
+    background: linear-gradient(145deg, #00796b, #00695c);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.opcao:hover {
+    transform: scale(1.05);
+}
+
+/* Voluntários */
+.voluntarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.vol-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    text-align: center;
+}
+
+.vol-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+/* Agendamento de Atividades - Coluna esquerda */
+.form-agendamento {
+    padding: 2rem 10%;
+    background-color: #f6f6f6;
+    min-height: 91vh;
+}
+
+.form-agendamento label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.form-agendamento input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+.horarios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.horarios button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background: #f5f5f5;
+}
+
+.horarios button.ativo {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.horarios button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Agendamento de Atividades - Coluna direita */
+.voluntarios-disponiveis {
+    padding: 2rem 5%;
+}
+
+.btn-agendamento {
+    width: 70%;
+    padding: 15px;
+    margin: 3rem auto;
+    display: block;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-agendamento:hover {
+    background-color: #004d40;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+
+    .calendario-container,
+    .agendamento-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-opcoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
