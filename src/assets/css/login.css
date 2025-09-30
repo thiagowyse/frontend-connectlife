@@ -8,13 +8,42 @@
     --font-family: 'Roboto', sans-serif;
 }
 
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(-20px);
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast.success {
+    background: #4caf50;
+}
+
+.toast.error {
+    background: #f44336;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
 }
@@ -29,8 +58,10 @@ body {
 
 .container {
     display: flex;
-    width: 100%; /* Ocupa a largura total */
-    height: 100%; /* Ocupa a altura total */
+    width: 100%;
+    /* Ocupa a largura total */
+    height: 100%;
+    /* Ocupa a altura total */
     background-color: #fff;
     /* Remover sombra e border-radius para tela cheia */
     border-radius: 0;
@@ -44,14 +75,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 5%; /* Ajuste a porcentagem para um bom espaçamento em tela cheia */
+    padding: 5%;
+    /* Ajuste a porcentagem para um bom espaçamento em tela cheia */
     background-color: #fff;
-    max-width: 50%; /* Limita a largura do painel de login para não esticar demais */
+    max-width: 50%;
+    /* Limita a largura do painel de login para não esticar demais */
 }
 
 @media (max-width: 992px) {
     .login-panel {
-        max-width: 100%; /* Em telas menores, o painel de login ocupa a largura total */
+        max-width: 100%;
+        /* Em telas menores, o painel de login ocupa a largura total */
     }
 }
 
@@ -131,7 +165,8 @@ p {
 .signup-link {
     width: 100%;
     text-align: center;
-    margin-top: auto; /* Empurra o link para a parte inferior do painel */
+    margin-top: auto;
+    /* Empurra o link para a parte inferior do painel */
     font-size: 0.9rem;
     padding-top: 20px;
 }
@@ -156,10 +191,12 @@ p {
 /* Responsividade */
 @media (max-width: 992px) {
     .image-panel {
-        display: none; /* Oculta a imagem em telas menores */
+        display: none;
+        /* Oculta a imagem em telas menores */
     }
 
     .login-panel {
-        padding: 40px 20px; /* Ajusta o padding para telas menores */
+        padding: 40px 20px;
+        /* Ajusta o padding para telas menores */
     }
 }
