@@ -1,28 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - Connect Life</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-wSNgp7yRgTcVEvSW0zNSVZYGh0mpSc.png" alt="Connect Life Logo" width="50">
-                <span>CONNECT LIFE</span>
-            </div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="sobre.html" class="active">Sobre</a>
-                <a href="seja-voluntario.html">Seja Voluntário</a>
-                <a href="beneficios.html">Benefícios</a>
-                <a href="blog.html">Blog</a>
-                <a href="faq.html">FAQ</a>
-                <a href="faca-agora.html" class="btn-nav">Faça Agora</a>
-            </nav>
+    <header class="main-header">
+        <div class="logo">
+            <img src="../assets//img/cadastro/connect_life.jpg" alt="Logo Connect Life"
+                style="width: 15%; height: 15%;">
+            <span>CONNECT LIFE</span>
         </div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="./sobre.html">Sobre</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Voluntários</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./seja-voluntario.html">Seja Voluntário</a></li>
+                        <li><a href="./beneficios.html">Benefícios</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="login.html">Entrar</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./login.html">Login</a></li>
+                        <li><a href="./cadastro.html">Cadastrar</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Mais</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <button class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </header>
 
     <main>
@@ -38,9 +65,13 @@
                 <div class="about-content">
                     <div class="about-text">
                         <h2>Quem Somos</h2>
-                        <p>O Connect Life é uma plataforma inovadora que conecta pessoas dispostas a fazer a diferença com instituições e projetos sociais que precisam de apoio voluntário.</p>
-                        <p>Fundada em 2024, nascemos da crença de que cada pessoa tem algo valioso para oferecer à sociedade. Seja através de tempo, habilidades ou conhecimento, todos podem contribuir para construir um mundo melhor.</p>
-                        <p>Nossa plataforma facilita essa conexão, tornando o voluntariado acessível, organizado e gratificante para todos os envolvidos.</p>
+                        <p>O Connect Life é uma plataforma inovadora que conecta pessoas dispostas a fazer a diferença
+                            com instituições e projetos sociais que precisam de apoio voluntário.</p>
+                        <p>Fundada em 2024, nascemos da crença de que cada pessoa tem algo valioso para oferecer à
+                            sociedade. Seja através de tempo, habilidades ou conhecimento, todos podem contribuir para
+                            construir um mundo melhor.</p>
+                        <p>Nossa plataforma facilita essa conexão, tornando o voluntariado acessível, organizado e
+                            gratificante para todos os envolvidos.</p>
                     </div>
                     <div class="about-image">
                         <img src="/placeholder.svg?height=400&width=500" alt="Voluntários trabalhando juntos">
@@ -57,9 +88,13 @@
                     </div>
                     <div class="mission-text">
                         <h2>Nossa Missão</h2>
-                        <p>Transformar o voluntariado em uma experiência acessível, significativa e impactante para todos.</p>
-                        <p>Acreditamos que ao facilitar a conexão entre voluntários e causas sociais, podemos multiplicar o impacto positivo nas comunidades e criar uma sociedade mais solidária e engajada.</p>
-                        <p>Trabalhamos para eliminar as barreiras que impedem as pessoas de se voluntariarem, oferecendo uma plataforma simples, transparente e eficiente.</p>
+                        <p>Transformar o voluntariado em uma experiência acessível, significativa e impactante para
+                            todos.</p>
+                        <p>Acreditamos que ao facilitar a conexão entre voluntários e causas sociais, podemos
+                            multiplicar o impacto positivo nas comunidades e criar uma sociedade mais solidária e
+                            engajada.</p>
+                        <p>Trabalhamos para eliminar as barreiras que impedem as pessoas de se voluntariarem, oferecendo
+                            uma plataforma simples, transparente e eficiente.</p>
                     </div>
                 </div>
             </div>
@@ -132,4 +167,5 @@
         </div>
     </footer>
 </body>
+
 </html>
