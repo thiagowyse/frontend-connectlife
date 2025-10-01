@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .calendario-container,
 .agendamento-container {
     display: grid;
@@ -274,7 +274,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-=======
 
 
 /* Navbar */
@@ -376,4 +375,3 @@ h1{
 .activity-card.active {
     border: 2px solid #00796b;
 }
->>>>>>> origin/develop_gabriel
