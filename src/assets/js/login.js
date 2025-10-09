@@ -18,7 +18,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
             localStorage.setItem("token", data.token); 
             showToast("Login realizado com sucesso!", "success");
             setTimeout(() => {
-                window.location.href = "./index.html";
+                window.location.href = "./dashboard.html";
             }, 1000);
         } else {
             const error = await response.json();

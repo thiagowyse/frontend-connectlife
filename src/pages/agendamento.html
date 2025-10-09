@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect Life - Agendamento de Atividades</title>
-    <link rel="stylesheet" href="../assets/css/atividades.css">
+    <link rel="stylesheet" href="../assets/css/agendamento.css">
     <link rel="stylesheet" href="../assets/css/index.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,116 +15,64 @@
 
 <body>
     <header class="main-header">
-        <div class="logo">
-            <span>CONNECT LIFE</span>
-        </div>
+        <div class="logo">CONNECT LIFE</div>
         <nav class="main-nav">
             <ul class="nav-links">
-                <li><a href="./index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Sobre</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Quem Somos</a></li>
-                        <li><a href="#">Nossa Missão</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Voluntários</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Encontre Voluntários</a></li>
-                        <li><a href="#">Suas Conexões</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Atividades</a>
-                    <ul class="dropdown-content">
-                        <li><a href="./calendarioAtividades.html">Calendário de Atividades</a></li>
-                        <li><a href="./agendamentoAtividades.html">Agende sua Atividade</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Mais</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="./conexoes.html">Conexões</a></li>
+                <li><a href="./agendamento.html" class="active">Atividades</a></li>
+                <li><a href="./calendarioAtividades.html">Calendário</a></li>
+                <li><a href="./eventos.html">Eventos</a></li>
                 <li><a href="./index.html">Sair</a></li>
             </ul>
         </nav>
-        <button class="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
     </header>
 
     <main class="agendamento-container">
-        <form class="form-agendamento">
-            <h2>Agendamento de atividades</h2>
+        <!-- Coluna esquerda: Formulário -->
+        <form class="form-agendamento" id="form-agendamento">
+            <h2>Agendar nova atividade</h2>
 
-            <label for="titulo">Título</label>
-            <input type="text" id="titulo" placeholder="Descreva brevemente sua atividade">
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" placeholder="Descreva brevemente sua atividade">
 
             <label for="data">Data</label>
             <input type="date" id="data">
 
-            <label for="horario">Horário</label>
+            <label for="hora">Horário</label>
             <div class="horarios">
-                <button class="ativo">11.00</button>
-                <button>12.00</button>
-                <button disabled>13.00</button>
-                <button>14.00</button>
-                <button>15.00</button>
-                <button disabled>16.00</button>
+                <button type="button" class="ativo">11:00</button>
+                <button type="button">12:00</button>
+                <button type="button" disabled>13:00</button>
+                <button type="button">14:00</button>
+                <button type="button">15:00</button>
             </div>
 
-            <button type="submit" class="btn-agendamento">Solicitar Agendamento</button>
+            <label for="voluntario">Voluntário</label>
+            <select id="voluntario">
+                <!-- Populado via JS do backend -->
+            </select>
+
+            <button type="submit" class="btn-agendamento">Agendar</button>
         </form>
 
-        <!-- Serão inseridos posteriormente via JS -->
-        <section class="voluntarios-disponiveis">
-            <h2><span>Voluntários</span> disponíveis</h2>
-            <div class="voluntarios-grid">
-                <div class="vol-card">
-                    <img src="https://i.pravatar.cc/100?img=5" alt="">
-                    <p>Mariana dos Santos</p>
-                    <span>★★★★★ (1221)</span>
-                </div>
-                <div class="vol-card">
-                    <img src="https://i.pravatar.cc/100?img=7" alt="">
-                    <p>João Mário Pereira</p>
-                    <span>★★★★★ (1023)</span>
-                </div>
-                <div class="vol-card">
-                    <img src="https://i.pravatar.cc/100?img=12" alt="">
-                    <p>Gustavo Martins</p>
-                    <span>★★★★☆ (821)</span>
-                </div>
-                <div class="vol-card">
-                    <img src="https://i.pravatar.cc/100?img=16" alt="">
-                    <p>Luiza Pasquini</p>
-                    <span>★★★☆☆ (910)</span>
-                </div>
-                <div class="vol-card">
-                    <img src="https://i.pravatar.cc/100?img=13" alt="">
-                    <p>Jackson Rodrigues</p>
-                    <span>★★★★★ (1137)</span>
-                </div>
-                <div class="vol-card">
-                    <img src="https://i.pravatar.cc/100?img=8" alt="">
-                    <p>Gabriel da Luz</p>
-                    <span>★★★★★ (1007)</span>
-                </div>
-                <div class="vol-card">
-                    <img src="https://i.pravatar.cc/100?img=10" alt="">
-                    <p>Vitória Ramos</p>
-                    <span>★★★☆☆ (567)</span>
-                </div>
-                <div class="vol-card">
-                    <img src="https://i.pravatar.cc/100?img=14" alt="">
-                    <p>Kauã Betineli</p>
-                    <span>★★★☆☆ (622)</span>
+        <!-- Coluna direita: Lista de atividades -->
+        <section class="atividades-main">
+            <h2>Minhas <span>Atividades</span></h2><br>
+            <div id="lista-atividades">
+                <!-- Card de atividade será criado via JS -->
+                <!-- Exemplo estático -->
+                <div class="atividade-card">
+                    <div>
+                        <p><strong>Oficina de Artes</strong></p>
+                        <p>Voluntário: João Mário Pereira</p>
+                        <p>Data: 13/10/2025 | Hora: 14:00</p>
+                        <p>Status: <span class="badge">AGENDADA</span></p>
+                    </div>
+                    <div class="acao-atividade">
+                        <button class="btn-concluir">Concluir</button>
+                        <button class="btn-cancelar">Cancelar</button>
+                    </div>
                 </div>
             </div>
         </section>

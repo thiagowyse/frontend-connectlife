@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     e.target.value = value;
   });
 
- 
+
   function showToast(message, type = "success") {
     const toast = document.getElementById("toast");
     toast.textContent = message;
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (response.ok) {
         showToast("Cadastro realizado com sucesso! Redirecionando...", "success");
-        setTimeout(() => (window.location.href = "index.html"), 2000);
+        setTimeout(() => (window.location.href = "login.html"), 2000);
       } else {
         showToast(result.message || "Erro ao cadastrar.", "error");
       }
