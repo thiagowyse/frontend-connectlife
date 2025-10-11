@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect Life - Agendamento de Atividades</title>
     <link rel="stylesheet" href="../assets/css/agendamento.css">
-    <link rel="stylesheet" href="../assets/css/index.css">
-
+    <link rel="stylesheet" href="../assets/css/headerDashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -15,68 +14,113 @@
 
 <body>
     <header class="main-header">
-        <div class="logo">CONNECT LIFE</div>
+        <div class="logo">
+            <img src="../assets//img/cadastro/connect_life.jpg" alt="Logo Connect Life" style="width: 15%; height: 15%;">
+            <span>CONNECT LIFE</span>
+        </div>
         <nav class="main-nav">
             <ul class="nav-links">
                 <li><a href="./dashboard.html">Dashboard</a></li>
                 <li><a href="./conexoes.html">Conexões</a></li>
                 <li><a href="./agendamento.html" class="active">Atividades</a></li>
-                <li><a href="./calendarioAtividades.html">Calendário</a></li>
+                <li><a href="./calendario.html">Calendário</a></li>
                 <li><a href="./eventos.html">Eventos</a></li>
                 <li><a href="./index.html">Sair</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="agendamento-container">
-        <!-- Coluna esquerda: Formulário -->
-        <form class="form-agendamento" id="form-agendamento">
-            <h2>Agendar nova atividade</h2>
+   <main class="container">
+    <section class="agendamento">
+      <h2>Agendamento de atividades</h2>
 
-            <label for="descricao">Descrição</label>
-            <input type="text" id="descricao" placeholder="Descreva brevemente sua atividade">
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" placeholder="Caminhada matinal" value="Caminhada matinal">
 
-            <label for="data">Data</label>
-            <input type="date" id="data">
+      <label for="data">Data</label>
+      <input type="text" id="data" value="30/Abr/2025">
 
-            <label for="hora">Horário</label>
-            <div class="horarios">
-                <button type="button" class="ativo">11:00</button>
-                <button type="button">12:00</button>
-                <button type="button" disabled>13:00</button>
-                <button type="button">14:00</button>
-                <button type="button">15:00</button>
-            </div>
+      <label>Horário</label>
+      <div class="horarios">
+        <button class="ativo">11.00</button>
+        <button>12.00</button>
+        <button class="desabilitado">13.00</button>
+        <button>14.00</button>
+        <button>15.00</button>
+        <button class="desabilitado">16.00</button>
+      </div>
+    </section>
 
-            <label for="voluntario">Voluntário</label>
-            <select id="voluntario">
-                <!-- Populado via JS do backend -->
-            </select>
+    <section class="voluntarios">
+      <h2><span>Voluntários</span> disponíveis</h2>
 
-            <button type="submit" class="btn-agendamento">Agendar</button>
-        </form>
+      <div class="lista-voluntarios">
+        <div class="card">
+          <img src="https://i.pravatar.cc/100?img=11" alt="">
+          <div>
+            <h3>Mariana dos Santos</h3>
+            <p>⭐⭐⭐⭐⭐ (1221)</p>
+          </div>
+        </div>
 
-        <!-- Coluna direita: Lista de atividades -->
-        <section class="atividades-main">
-            <h2>Minhas <span>Atividades</span></h2><br>
-            <div id="lista-atividades">
-                <!-- Card de atividade será criado via JS -->
-                <!-- Exemplo estático -->
-                <div class="atividade-card">
-                    <div>
-                        <p><strong>Oficina de Artes</strong></p>
-                        <p>Voluntário: João Mário Pereira</p>
-                        <p>Data: 13/10/2025 | Hora: 14:00</p>
-                        <p>Status: <span class="badge">AGENDADA</span></p>
-                    </div>
-                    <div class="acao-atividade">
-                        <button class="btn-concluir">Concluir</button>
-                        <button class="btn-cancelar">Cancelar</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        <div class="card">
+          <img src="https://i.pravatar.cc/100?img=12" alt="">
+          <div>
+            <h3>Jackson Rodrigues</h3>
+            <p>⭐⭐⭐⭐⭐ (1137)</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.pravatar.cc/100?img=13" alt="">
+          <div>
+            <h3>João Mário Pereira</h3>
+            <p>⭐⭐⭐⭐☆ (1023)</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.pravatar.cc/100?img=14" alt="">
+          <div>
+            <h3>Gabriel da Luz</h3>
+            <p>⭐⭐⭐⭐⭐ (1007)</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.pravatar.cc/100?img=15" alt="">
+          <div>
+            <h3>Gustavo Martins</h3>
+            <p>⭐⭐⭐☆☆ (821)</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.pravatar.cc/100?img=16" alt="">
+          <div>
+            <h3>Vitória Ramos</h3>
+            <p>⭐⭐⭐☆☆ (567)</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.pravatar.cc/100?img=17" alt="">
+          <div>
+            <h3>Luiza Pasquini</h3>
+            <p>⭐⭐⭐☆☆ (910)</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.pravatar.cc/100?img=18" alt="">
+          <div>
+            <h3>Kauã Betineli</h3>
+            <p>⭐⭐☆☆☆ (622)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

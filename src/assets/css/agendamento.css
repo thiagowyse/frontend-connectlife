@@ -1,232 +1,170 @@
-:root {
-    --primary-color: #00796b;
-    --secondary-color: #e0f2f1;
-    --text-color: #333;
-    --gray-text-color: #666;
-    --background-color: #f4f6f8;
-    --border-radius: 8px;
-    --font-family: 'Roboto', sans-serif;
-}
-
-/* Reset básico */
+/* ===== Reset e layout geral ===== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-family);
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header */
-.main-header {
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+body {
+  background: #fff;
+  color: #222;
 }
 
-.logo {
-    font-weight: 700;
-    color: var(--primary-color);
-    font-size: 1.2rem;
+/* ===== Container principal ===== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 60px 100px;
 }
 
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
+/* ===== Bloco de agendamento ===== */
+.agendamento {
+  background: #f9f9fb;
+  padding: 30px 40px;
+  border-radius: 20px;
+  width: 350px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.main-nav ul li a {
-    text-decoration: none;
-    color: var(--gray-text-color);
-    font-weight: 500;
-    transition: color 0.3s;
+.agendamento h2 {
+  color: #312f65;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
-.main-nav ul li a.active,
-.main-nav ul li a:hover {
-    color: var(--primary-color);
+.agendamento label {
+  display: block;
+  margin-top: 18px;
+  color: #777;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-/* Containers principais */
-.calendario-container,
-.agendamento-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1.5rem;
+.agendamento input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  font-size: 0.95rem;
 }
 
-/* Formulário de agendamento - Coluna esquerda */
-.form-agendamento {
-    padding: 2rem 10%;
-    background-color: #f6f6f6;
-    min-height: 91vh;
-}
-
-.form-agendamento label {
-    display: block;
-    margin-top: 1rem;
-    font-weight: 500;
-}
-
-.form-agendamento input,
-.form-agendamento select {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    font-size: 0.95rem;
-    cursor: pointer;
-    background-color: #fff;
-}
-
+/* ===== Botões de horário ===== */
 .horarios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .horarios button {
-    padding: 0.75rem;
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    background: #f5f5f5;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  background: #f1f1f1;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.horarios button.ativo {
-    background: var(--primary-color);
-    color: #fff;
+.horarios button:hover {
+  background: #e7e7e7;
 }
 
-.horarios button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
+.horarios .ativo {
+  background: #006d6f;
+  color: #fff;
 }
 
-.btn-agendamento {
-    width: 70%;
-    padding: 15px;
-    margin: 3rem auto 0;
-    display: block;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: var(--border-radius);
-    font-size: 1.1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.horarios .desabilitado {
+  background: #d6d6d6;
+  color: #8a8a8a;
+  cursor: not-allowed;
 }
 
-.btn-agendamento:hover {
-    background-color: #004d40;
+/* ===== Seção de voluntários ===== */
+.voluntarios {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  flex: 1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-/* Coluna direita - Lista de atividades */
-.atividades-main {
-    padding: 2rem 5%;
+.voluntarios h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 25px;
 }
 
-#lista-atividades {
-    display: grid;
-    gap: 1rem;
+.voluntarios h2 span {
+  color: #008080;
 }
 
-/* Cards de atividade */
-.atividade-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #fff;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    padding: 1rem;
-    transition: transform 0.2s, box-shadow 0.2s;
+/* ===== Cards ===== */
+.lista-voluntarios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.atividade-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+.card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 12px 16px;
+  gap: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.atividade-card div p {
-    margin: 0.25rem 0;
-    font-size: 0.95rem;
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-.atividade-card .badge {
-    font-size: 0.8rem;
-    padding: 4px 8px;
-    border-radius: 12px;
-    color: #fff;
+.card img {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
-.badge.PENDENTE {
-    background-color: #ffa000;
+.card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
 }
 
-.badge.AGENDADA,
-.badge.ATIVA {
-    background-color: #00796b;
+.card p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 3px;
 }
 
-.badge.REJEITADA {
-    background-color: #d32f2f;
-}
+/* ===== Responsividade ===== */
+@media (max-width: 950px) {
+  .container {
+    flex-direction: column;
+    padding: 30px;
+  }
 
-/* Botões de ação dentro do card */
-.acao-atividade {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
+  .voluntarios {
+    width: 100%;
+  }
 
-.acao-atividade button {
-    padding: 6px 12px;
-    border-radius: var(--border-radius);
-    border: none;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 0.85rem;
-    transition: all 0.2s ease;
-}
+  .agendamento {
+    width: 100%;
+  }
 
-.btn-concluir {
-    background-color: #00796b;
-    color: #fff;
-}
-
-.btn-concluir:hover {
-    background-color: #004d40;
-}
-
-.btn-cancelar {
-    background-color: #ff9800;
-    color: #fff;
-}
-
-.btn-cancelar:hover {
-    background-color: #e65100;
-}
-
-/* Responsividade */
-@media (max-width: 992px) {
-    .agendamento-container {
-        grid-template-columns: 1fr;
-    }
-
-    .atividade-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .acao-atividade {
-        justify-content: flex-start;
-        margin-top: 0.5rem;
-    }
+  .lista-voluntarios {
+    grid-template-columns: 1fr;
+  }
 }

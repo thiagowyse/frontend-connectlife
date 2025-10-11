@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f9fafb;
+  color: #1e293b;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ======= SIDEBAR ======= */
+.sidebar {
+  width: 30%;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  padding: 2rem;
+}
+
+.sidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.semanais-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.semanais-header h3 {
+  font-size: 1rem;
+}
+
+.semanais-header a {
+  color: #0f766e;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.atividade {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f1f5f9;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  font-size: 1.8rem;
+}
+
+.detalhes h4 {
+  font-size: 1rem;
+}
+
+.detalhes p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.detalhes span {
+  font-size: 0.8rem;
+  color: #0f766e;
+}
+
+/* CALENDÁRIO */
+.calendario {
+  margin-top: 2rem;
+}
+
+.calendario h3 {
+  margin-bottom: 0.3rem;
+}
+
+.calendario p {
+  color: #0f766e;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.dias {
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.semana {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+.datas {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.datas span {
+  padding: 6px 0;
+  border-radius: 6px;
+}
+
+.datas .ativo {
+  background: #0f766e;
+  color: #fff;
+}
+
+/* ======= CONTEÚDO PRINCIPAL ======= */
+.conteudo {
+  flex: 1;
+  padding: 3rem;
+}
+
+.conteudo h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.conteudo h1 span {
+  color: #0f766e;
+}
+
+.atividades-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.atividades-grid button {
+  padding: 1.5rem;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #0d9488, #0f766e);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.atividades-grid button:hover {
+  transform: scale(1.05);
+}
+
+.subtitulo {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #0f766e;
+}
+
+.voluntarios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 1rem;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card h4 {
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 1100px) {
+  .atividades-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .conteudo {
+    padding: 2rem;
+  }
+
+  .atividades-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .voluntarios {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .conteudo h1 {
+    font-size: 1.4rem;
+  }
+
+  .atividades-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atividade {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sidebar {
+    padding: 1.5rem;
+  }
+
+  .conteudo {
+    padding: 1.5rem;
+  }
+}
